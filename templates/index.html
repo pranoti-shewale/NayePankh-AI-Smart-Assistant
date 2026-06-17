@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NayePankh AI Smart Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="chat-box">
+
+            <!-- Header -->
+            <div class="header">
+                <h1>🤖 NayePankh AI Smart Assistant</h1>
+                <p>Welcome to NayePankh Foundation</p>
+            </div>
+
+            <!-- Chat Area -->
+            <div id="chat-area" class="chat-area">
+
+                <div class="bot-message">
+                    <strong>AI Assistant:</strong><br><br>
+
+                    Hello! 👋<br><br>
+
+                    I am the <b>NayePankh AI Smart Assistant</b>.<br><br>
+
+                    I can help you with:
+                    <br><br>
+
+                    ✔ Internship Information<br>
+                    ✔ Volunteer Registration<br>
+                    ✔ Donation Information<br>
+                    ✔ Events & Activities<br>
+                    ✔ Contact Details<br><br>
+
+                    Please choose an option below or type your question.
+                </div>
+
+            </div>
+
+            <!-- Quick Buttons -->
+            <div class="quick-buttons">
+
+                <button onclick="quickQuestion('Internship')">💼 Internship</button>
+
+                <button onclick="quickQuestion('Volunteer')">👥 Volunteer</button>
+
+                <button onclick="quickQuestion('Donation')">💝 Donation</button>
+
+                <button onclick="quickQuestion('Events')">📅 Events</button>
+
+                <button onclick="quickQuestion('Contact')">📞 Contact</button>
+
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Ask your question...">
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+            <!-- Clear Chat -->
+            <div class="clear-area">
+
+                <button onclick="clearChat()">
+                    🗑 Clear Chat
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
